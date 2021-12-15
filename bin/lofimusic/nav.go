@@ -72,7 +72,7 @@ func (n *nav) Render() app.UI {
 								Class("focus").
 								Class("glow").
 								Href("/").
-								Text("Lofimusic"),
+								Text("Vibe"),
 						),
 				),
 			app.Nav().
