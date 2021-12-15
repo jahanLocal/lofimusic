@@ -1,12 +1,4 @@
-runtime: go113
-api_version: 1
-threadsafe: true
+runtime: go115
 
-handlers:
-  - url: /
-    static_files: www/index.html
-    upload: www/index.html
-
-  - url: /(.*)
-    static_files: www/\1
-    upload: www/(.*)
+#this file needs to be properly configured s.t. the go modules in bin/lofimusic/
+#contain the correct module paths.  There is currently a filepath error
