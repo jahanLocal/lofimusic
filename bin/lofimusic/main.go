@@ -61,7 +61,7 @@ func main() {
 			"app",
 			"pwa",
 		},
-		LoadingLabel: "Lofi music player to work, study and relax.",
+		LoadingLabel: "Music for the metaverse... Enjoy!",
 		Name:         "Lofimusic",
 		Image:        "https://lofimusic.app/web/covers/lofimusic.png",
 		RawHeaders:   []string{},
@@ -74,7 +74,7 @@ func main() {
 		Title:      "Lofimusic",
 	}
 
-	opts := options{Port: 4000}
+	opts := options{Port: 4000} //figure out how to set this option via make
 	cli.Register("local").
 		Help(`Launches a server that serves the documentation app in a local environment.`).
 		Options(&opts)
