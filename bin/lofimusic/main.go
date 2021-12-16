@@ -66,7 +66,7 @@ func main() {
 			"app",
 			"pwa",
 		},
-		LoadingLabel: "Lofi music player to work, study and relax.",
+		LoadingLabel: "Music for the metaverse... Enjoy!",
 		Name:         "Lofimusic",
 		Image:        "https://lofimusic.app/web/covers/lofimusic.png",
 		RawHeaders: []string{
