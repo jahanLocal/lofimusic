@@ -94,10 +94,16 @@ func (r *radio) randomRadio() liveRadio {
 }
 
 func (r *radio) Render() app.UI {
+
 	return app.Main().
 		Class("radio").
 		Class("fill").
 		Body(
+		    app.Video().Class("alt-video-link").
+		    Src(r.current.gifURL).
+		    AutoPlay(true).
+		    Loop(true).
+		    Text("autoplay loop"),
 			newYouTubePlayer().
 				Class("radio-player").
 				Class("fill").

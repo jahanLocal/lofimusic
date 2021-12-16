@@ -12,6 +12,7 @@ type liveRadio struct {
 	Name    string
 	Owner   string
 	URL     string
+	gifURL string
 	Cards   []string
 	Links   []socialLink
 	AddedAt time.Time
@@ -60,6 +61,7 @@ func getLiveRadios() []liveRadio {
 		    Name: "Metaverse Boom",
 		    Owner: "Decentraland",
 		    URL: "https://www.youtu.be/-9gEgshJUuY",
+		    gifURL: "https://cdn-animation.artstation.com/p/video_sources/000/157/318/video-final0001-0240.mp4",
 		    Cards: []string{
                 "This is the boombox that rocks the Metaverse",
             	"Discovered high on the slopes of Mt. Fuji by the Wu Tang Clan",
@@ -69,6 +71,10 @@ func getLiveRadios() []liveRadio {
                 {
                     Slug: "discord",
                     URL:  "https://discord.com/invite/lofigirl",
+                },
+                {
+                    Slug: "NFT",
+                    URL: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/107348447574672300898797177560897166546098074247836768685144822490415207809025",
                 },
             },
 		},
@@ -608,6 +614,9 @@ type socialLink struct {
 
 func socialIcon(slug string) string {
 	switch slug {
+	case "NFT":
+	    return cryptoSVG
+
 	case "youtube":
 		return youtubeSVG
 

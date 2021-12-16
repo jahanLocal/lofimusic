@@ -44,7 +44,7 @@ type youTubePlayer struct {
 	volume      volume
 	err         error
 
-	realeaseOnReady      func()
+	releaseOnReady      func()
 	releaseOnStateChange func()
 	releaseOnError       func()
 }
@@ -84,8 +84,8 @@ func (p *youTubePlayer) OnNav(ctx app.Context) {
 }
 
 func (p *youTubePlayer) OnDismount() {
-	if p.realeaseOnReady != nil {
-		p.realeaseOnReady()
+	if p.releaseOnReady != nil {
+		p.releaseOnReady()
 	}
 	if p.releaseOnStateChange != nil {
 		p.releaseOnStateChange()
@@ -124,7 +124,7 @@ func (p *youTubePlayer) loadVideo(ctx app.Context) {
 			})
 			return nil
 		})
-		p.realeaseOnReady = onReady.Release
+		p.releaseOnReady = onReady.Release
 
 		onStateChange := app.FuncOf(func(this app.Value, args []app.Value) interface{} {
 			ctx.Dispatch(func(ctx app.Context) {
