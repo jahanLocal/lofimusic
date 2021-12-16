@@ -56,6 +56,23 @@ func getLiveRadios() []liveRadio {
 			},
 		},
 		{
+		    Slug: "metaboombox",
+		    Name: "Metaverse Boom",
+		    Owner: "Decentraland",
+		    URL: "https://www.youtu.be/-9gEgshJUuY",
+		    Cards: []string{
+                "This is the boombox that rocks the Metaverse",
+            	"Discovered high on the slopes of Mt. Fuji by the Wu Tang Clan",
+            	"It only rocks for the worthy of spirit.  But it always rocks for them.",
+            },
+            Links: []socialLink{
+                {
+                    Slug: "discord",
+                    URL:  "https://discord.com/invite/lofigirl",
+                }
+            }
+		},
+		{
 			Slug:  "lofigirl",
 			Name:  "Lofi Girl",
 			Owner: "Lofi Girl",
