@@ -96,7 +96,7 @@ func main() {
 		Title:      "Lofimusic",
 	}
 
-	opts := options{Port: 4000}
+	opts := options{Port: 443}
 	cli.Register("local").
 		Help(`Launches a server that serves the documentation app in a local environment.`).
 		Options(&opts)
