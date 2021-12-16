@@ -69,8 +69,8 @@ func getLiveRadios() []liveRadio {
                 {
                     Slug: "discord",
                     URL:  "https://discord.com/invite/lofigirl",
-                }
-            }
+                },
+            },
 		},
 		{
 			Slug:  "lofigirl",
