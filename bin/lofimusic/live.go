@@ -212,7 +212,7 @@ func getLiveRadios() []liveRadio {
 		    Slug: "jack-harlow-channel",
 		    Name: "Harlow Hour",
 		    Owner: "Jack Harlow",
-		    URL: "https://www.youtu.be/05689ErDUdM",
+		    URL: "https://youtu.be/do91RD9-IKM",
 		    gifURL: "https://audibletreats.com/wp-content/uploads/2020/06/2db0c64a-8c6b-4cda-b127-5e2b1ccde1e8-1.gif",
 		    realGif: true,
 		    Cards: []string{
