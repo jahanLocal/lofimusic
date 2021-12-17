@@ -100,10 +100,14 @@ func (r *radio) Render() app.UI {
 		Class("fill").
 		Body(
 		    app.Video().Class("alt-video-link").
+		    ID("alt-video-player").
 		    Src(r.current.gifURL).
 		    AutoPlay(true).
 		    Loop(true).
 		    Text("autoplay loop"),
+		    app.Img().Class("alt-gif-link").
+		    Src(r.current.gifURL).
+		    ID("alt-gif-player"),
 			newYouTubePlayer().
 				Class("radio-player").
 				Class("fill").

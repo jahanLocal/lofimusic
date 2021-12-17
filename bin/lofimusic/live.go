@@ -13,6 +13,7 @@ type liveRadio struct {
 	Owner   string
 	URL     string
 	gifURL string
+	realGif bool //NOTE - this bool is not yet used because of the naive implementation
 	Cards   []string
 	Links   []socialLink
 	AddedAt time.Time
@@ -27,8 +28,8 @@ func getLiveRadios() []liveRadio {
 		{
 		    Slug: "metaboombox",
 		    Name: "Metaverse Boom",
-		    Owner: "Decentraland",
-		    URL: "https://www.youtu.be/-9gEgshJUuY",
+		    Owner: "Wu Tang Clan",
+		    URL: "https://youtu.be/n4pr7j-kTO0",
 		    gifURL: "https://cdn-animation.artstation.com/p/video_sources/000/157/318/video-final0001-0240.mp4",
 		    Cards: []string{
                 "This is the boombox that rocks the Metaverse",
@@ -135,6 +136,7 @@ func getLiveRadios() []liveRadio {
 			Name:  "College Girl",
 			Owner: "College Music",
 			URL:   "https://youtu.be/MCkTebktHVc",
+			gifURL: "https://cdn.dribbble.com/users/330915/screenshots/4840771/2.gif",
 			Cards: []string{},
 			Links: []socialLink{
 				{
@@ -164,44 +166,17 @@ func getLiveRadios() []liveRadio {
 			},
 		},
 		{
-			Slug:  "collegemusic-guy",
-			Name:  "College Guy",
-			Owner: "College Music",
-			URL:   "https://youtu.be/XDh0JcxrbPM",
-			Cards: []string{},
-			Links: []socialLink{
-				{
-					Slug: "website",
-					URL:  "https://www.collegemusic.co.uk/",
-				},
-				{
-					Slug: "youtube",
-					URL:  "https://youtu.be/XDh0JcxrbPM",
-				},
-				{
-					Slug: "spotify",
-					URL:  "https://open.spotify.com/playlist/32hJXySZtt9YvnwcYINGZ0",
-				},
-				{
-					Slug: "instagram",
-					URL:  "https://www.instagram.com/collegemusic",
-				},
-				{
-					Slug: "facebook",
-					URL:  "https://www.facebook.com/collegemusic",
-				},
-				{
-					Slug: "twitter",
-					URL:  "https://twitter.com/collegemusicyt",
-				},
+			Slug:  "duashouserelax",
+			Name:  "Lady Gaga's House Mix",
+			Owner: "Lady Gaga",
+			URL:   "https://youtu.be/CHmYlCzyZdE",
+			gifURL: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/5e385214058787.57f85763bc159.gif",
+			realGif: true,
+			Cards: []string{
+			    "Uplifting mix by Lady Gaga",
+			    "for VIPs Only",
+			    "Should we let you get in?",
 			},
-		},
-		{
-			Slug:  "collegemusic-lonely",
-			Name:  "College Lonely",
-			Owner: "College Music",
-			URL:   "https://youtu.be/bM0Iw7PPoU4",
-			Cards: []string{},
 			Links: []socialLink{
 				{
 					Slug: "website",
@@ -230,11 +205,33 @@ func getLiveRadios() []liveRadio {
 			},
 		},
 		{
+		    Slug: "jack-harlow-channel",
+		    Name: "Harlow Hour",
+		    Owner: "Jack Harlow",
+		    URL: "https://www.youtu.be/05689ErDUdM",
+		    gifURL: "https://audibletreats.com/wp-content/uploads/2020/06/2db0c64a-8c6b-4cda-b127-5e2b1ccde1e8-1.gif",
+		    realGif: true,
+		    Cards: []string{
+                "All Glorious Hip Hop All the Time",
+            },
+            Links: []socialLink{
+                {
+                    Slug: "discord",
+                    URL:  "https://discord.com/invite/lofigirl",
+                },
+                {
+                    Slug: "NFT",
+                    URL: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/107348447574672300898797177560897166546098074247836768685144822490415207809025",
+                },
+            },
+		},
+		{
 			Slug:  "lofi-code-beats",
 			Name:  "Coding Beats",
 			Owner: "Joma Tech",
 			URL:   "https://youtu.be/PY8f1Z3nARo",
-			gifURL: "https://youtu.be/11jY4FB2-oI",
+			gifURL: "https://cdn.dribbble.com/users/720825/screenshots/3253310/media/7988b21c14bfe59f6b0edb72fccfac28.gif",
+			realGif: true,
 			Cards: []string{},
 			Links: []socialLink{
 				{
@@ -260,6 +257,7 @@ func getLiveRadios() []liveRadio {
 			Name:  "Steezy Coffee Shop",
 			Owner: "STEEZYASFUCK",
 			URL:   "https://youtu.be/-5KAN9_CzSA",
+			gifURL: "https://cdn.dribbble.com/users/472824/screenshots/15693827/media/40bd1b5274ad5d38593e00317fc83abd.mp4",
 			Cards: []string{},
 			Links: []socialLink{
 				{
@@ -285,36 +283,17 @@ func getLiveRadios() []liveRadio {
 			},
 		},
 		{
-			Slug:  "closedonsunday-pop-culture",
-			Name:  "Pop Culture Sunday",
-			Owner: "Closed on Sunday",
-			URL:   "https://youtu.be/Tgme8K4XlHQ",
-			Cards: []string{},
-			Links: []socialLink{
-				{
-					Slug: "youtube",
-					URL:  "https://youtu.be/Tgme8K4XlHQ",
-				},
-				{
-					Slug: "spotify",
-					URL:  "https://open.spotify.com/artist/1LwjR2mIm78OJRTYdkMLl3",
-				},
-				{
-					Slug: "discord",
-					URL:  "https://discord.com/invite/closedonsunday",
-				},
-				{
-					Slug: "instagram",
-					URL:  "https://www.instagram.com/closedonsundayy",
-				},
+			Slug:  "legends",
+			Name:  "Legends of Rock",
+			Owner: "Freddy Mercury",
+			URL:   "https://youtu.be/AWw0mJp4B8s",
+			gifURL:"https://cdn.dribbble.com/users/240341/screenshots/5530930/freddie.gif",
+			realGif: true,
+			Cards: []string{
+			    "Is this the real life?",
+			    "Is this just fantasy?",
+			    "Caught in a landslide...",
 			},
-		},
-		{
-			Slug:  "closedonsunday-starwars",
-			Name:  "Star Wars Sunday",
-			Owner: "Closed on Sunday",
-			URL:   "https://youtu.be/o33l32ZrIy8",
-			Cards: []string{},
 			Links: []socialLink{
 				{
 					Slug: "youtube",
@@ -335,123 +314,10 @@ func getLiveRadios() []liveRadio {
 			},
 		},
 		{
-			Slug:  "tokyolosttracks",
-			Name:  "サクラチル",
-			Owner: "Tokyo LosT Track -Sakura Chill-",
-			URL:   "https://youtu.be/WBfbkPTqUtU",
-			Cards: []string{},
-			Links: []socialLink{
-				{
-					Slug: "youtube",
-					URL:  "https://youtu.be/WBfbkPTqUtU",
-				},
-				{
-					Slug: "spotify",
-					URL:  "https://open.spotify.com/playlist/37i9dQZF1DX87D1EaNZxW1",
-				},
-				{
-					Slug: "discord",
-					URL:  "https://discord.com/invite/fHkhEgc",
-				},
-				{
-					Slug: "reddit",
-					URL:  "https://www.reddit.com/r/LofiGirl",
-				},
-				{
-					Slug: "instagram",
-					URL:  "https://www.instagram.com/TokyoLosTTracks",
-				},
-				{
-					Slug: "facebook",
-					URL:  "https://www.facebook.com/TokyoLosTTracks",
-				},
-				{
-					Slug: "twitter",
-					URL:  "https://twitter.com/TTT_SakuraChill",
-				},
-			},
-		},
-		{
-			Slug:  "thebootlegboy",
-			Name:  "Bootleg Smoke",
-			Owner: "the bootleg boy",
-			URL:   "https://youtu.be/l7TxwBhtTUY",
-			Cards: []string{},
-			Links: []socialLink{
-				{
-					Slug: "website",
-					URL:  "https://www.thebootlegboy.com",
-				},
-				{
-					Slug: "youtube",
-					URL:  "https://youtu.be/l7TxwBhtTUY",
-				},
-				{
-					Slug: "spotify",
-					URL:  "https://open.spotify.com/playlist/71019EDcRamfMmOEEoTdEu?si=XePP-REWQDSuzJT6-SXwSQ",
-				},
-				{
-					Slug: "discord",
-					URL:  "https://discord.com/invite/FZrUkey",
-				},
-				{
-					Slug: "instagram",
-					URL:  "https://www.instagram.com/thebootlegboy",
-				},
-				{
-					Slug: "twitter",
-					URL:  "https://twitter.com/thebootlegboy",
-				},
-			},
-		},
-		{
-			Slug:  "sleepynatula",
-			Name:  "Sleepy Natula",
-			Owner: "Tone by Gridge",
-			URL:   "https://youtu.be/pCuy6U-RVFk",
-			Cards: []string{
-				"Sleepy Natula is a radio that broadcasts Neo chill beats style songs, produced by Tone by Gridge in the Japanese city of Tokyo.",
-				"The animation shows Natula, a girl that fell asleep after drinking a relaxation drink named CHILL OUT.",
-				"Natula lives in Sephora, a city located on a musical planet named Tone.",
-				"On this planet, music is so important that it touches every species, nature, climate, culture, and civilization of each country.",
-				"Tone is a multicultural planet where there are thousands of countries populated by music-loving beings that come from all over the galaxy.",
-			},
-			Links: []socialLink{
-				{
-					Slug: "website",
-					URL:  "https://linktr.ee/tonebygridge?fbclid=IwAR2OYWJlav7MM66780DDtuu2k2viElVF3kgjn-GEK8c2RsvYt0TGOYz31zQ",
-				},
-				{
-					Slug: "youtube",
-					URL:  "https://youtu.be/pCuy6U-RVFk",
-				},
-				{
-					Slug: "spotify",
-					URL:  "https://open.spotify.com/playlist/1stD3Nr9W5HWf47ft5TfKh?si=fDM2-nsIRlSdv2IC_KaanQ",
-				},
-				{
-					Slug: "discord",
-					URL:  "https://discord.com/invite/eqH6RRj",
-				},
-				{
-					Slug: "facebook",
-					URL:  "https://www.facebook.com/tonedotcom",
-				},
-				{
-					Slug: "instagram",
-					URL:  "https://www.instagram.com/tonebygridge",
-				},
-				{
-					Slug: "twitter",
-					URL:  "https://twitter.com/tonedotcom",
-				},
-			},
-		},
-		{
-			Slug:  "dreamhop",
-			Name:  "Dreamhop",
-			Owner: "Dreamhop Music",
-			URL:   "https://youtu.be/tCs48OFv7xA",
+			Slug:  "r&bsoul",
+			Name:  "R&B (90s-2000s)",
+			Owner: "United Masters",
+			URL:   "https://youtu.be/xbVO6tuDfcM",
 			Cards: []string{},
 			Links: []socialLink{
 				{
