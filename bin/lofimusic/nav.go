@@ -107,18 +107,13 @@ func (n *nav) Render() app.UI {
 						Body(
 							newLink().
 								Class("glow").
-								Icon(newSVGIcon().RawSVG(coffeeSVG)).
-								Label("Buy me a coffee").
-								Href(buyMeACoffeeURL),
-							newLink().
-								Class("glow").
 								Icon(newSVGIcon().RawSVG(cryptoSVG)).
-								Label("Donate cryptos").
+								Label("Stake $Vibe Tokens").
 								Href(coinbaseBusinessURL),
 							newLink().
 								Class("glow").
-								Icon(newSVGIcon().RawSVG(githubSVG)).
-								Label("GitHub").
+								Icon(newSVGIcon().RawSVG(discordSVG)).
+								Label("Discord").
 								Href(githubURL),
 							newLink().
 								Class("glow").

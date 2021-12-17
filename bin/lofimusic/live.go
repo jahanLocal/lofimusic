@@ -96,10 +96,14 @@ func getLiveRadios() []liveRadio {
 		},
 		{
 			Slug:  "chillhop",
-			Name:  "Chillhop Raccoon",
+			Name:  "Chillhop Racoon",
 			Owner: "Chillhop Music",
 			URL:   "https://youtu.be/5yx6BWlEVcY",
-			Cards: []string{},
+			gifURL: "https://d.furaffinity.net/art/leto/1633629574/1633629574.leto_chillhop_-_guitar_compressed.gif",
+			realGif: false,
+			Cards: []string{
+			    "Chill out and get me some garbage to eat...",
+			},
 			Links: []socialLink{
 				{
 					Slug: "website",
@@ -287,10 +291,10 @@ func getLiveRadios() []liveRadio {
 			Name:  "Legends of Rock",
 			Owner: "Freddy Mercury",
 			URL:   "https://youtu.be/AWw0mJp4B8s",
-			gifURL:"https://cdn.dribbble.com/users/240341/screenshots/5530930/freddie.gif",
+			gifURL:"https://cdn.dribbble.com/users/1921422/screenshots/5511883/media/3bcad7440135a8609960f46fb4167851.gif",
 			realGif: true,
 			Cards: []string{
-			    "Is this the real life?",
+			    "Is this real life...",
 			    "Is this just fantasy?",
 			    "Caught in a landslide...",
 			},
@@ -318,6 +322,8 @@ func getLiveRadios() []liveRadio {
 			Name:  "R&B (90s-2000s)",
 			Owner: "United Masters",
 			URL:   "https://youtu.be/xbVO6tuDfcM",
+			gifURL: "https://cdn.dribbble.com/users/2936641/screenshots/10481284/media/666b64490c5eb532c3c5200a3951a7b2.gif",
+			realGif: true,
 			Cards: []string{},
 			Links: []socialLink{
 				{
