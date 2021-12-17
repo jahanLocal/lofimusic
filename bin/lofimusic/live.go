@@ -25,38 +25,6 @@ func (r liveRadio) youtubeID() string {
 func getLiveRadios() []liveRadio {
 	radios := []liveRadio{
 		{
-			Slug:  "everything-fades-to-blue",
-			Name:  "Everything Fades To Blue",
-			Owner: "Sleepy Fish",
-			URL:   "https://youtu.be/PfgS405CdXk",
-			Cards: []string{
-				"Everything Fades To Blue is a mix of indie/emo and ambient music produced by Sleep Fish, a Pennsylvania-based producer that is also a student in statistics, data science, and machine learning.",
-				"Sleepy Fish is one of the few Lo-fi artists who actually sing in its creations.",
-				"Everything Fades To Blue is the 3rd episode of a story where a tidal wave destroys an island along with the home where Sleepy Fish used to live.",
-				"Toppled into the sea, on its own for the first time, Sleepy Fish uses its glow to search for family, to guide others, and to find its way.",
-				`The episode comes after "My Room Becomes the Sea" and "Beneath Your Waves".`,
-				"The undersea-themed animation has been made in collaboration with Tristan Gion and Bien à Vous Studio, a French studio based in Nantes.",
-			},
-			Links: []socialLink{
-				{
-					Slug: "website",
-					URL:  "https://chillhop.com/releases/sleepy-fish-everything-fades-to-blue",
-				},
-				{
-					Slug: "youtube",
-					URL:  "https://youtu.be/PfgS405CdXk",
-				},
-				{
-					Slug: "spotify",
-					URL:  "https://open.spotify.com/artist/1IJe80moz409PtxW4llPFw",
-				},
-				{
-					Slug: "instagram",
-					URL:  "https://www.instagram.com/sleepyfishmusic",
-				},
-			},
-		},
-		{
 		    Slug: "metaboombox",
 		    Name: "Metaverse Boom",
 		    Owner: "Decentraland",
@@ -83,6 +51,7 @@ func getLiveRadios() []liveRadio {
 			Name:  "Lofi Girl",
 			Owner: "Lofi Girl",
 			URL:   "https://youtu.be/5qap5aO4i9A",
+			gifURL: "https://c.tenor.com/dFRmjNDK9TwAAAPo/ghibli.mp4",
 			Cards: []string{
 				"Lofi girl is a radio that broadcasts lo-fi hip hop songs created by a French fellow named Dimitri in 2017.",
 				`The animation, made by Juan Pablo Machado, is modeled after Shizuku Tsukishima, a girl character from the Studio Ghibli film "Whisper of the Heart".`,
@@ -125,51 +94,6 @@ func getLiveRadios() []liveRadio {
 			},
 		},
 		{
-			Slug:  "lofigirl-sleepy",
-			Name:  "Lofi Sleepy Girl",
-			Owner: "Lofi Girl",
-			URL:   "https://youtu.be/DWcJFNfaw9c",
-			Cards: []string{
-				"Lofi girl is a radio that broadcasts lo-fi hip hop songs created by a French fellow named Dimitri in 2017.",
-				`The animation, made by Juan Pablo Machado, is modeled after Shizuku Tsukishima, a girl character from the Studio Ghibli film "Whisper of the Heart".`,
-				"Named Jade, the Lofi girl is living in Lyon, a city from France where her designer Juan Pablo used to live.",
-			},
-			Links: []socialLink{
-				{
-					Slug: "website",
-					URL:  "https://lofigirl.com",
-				},
-				{
-					Slug: "youtube",
-					URL:  "https://youtu.be/DWcJFNfaw9c",
-				},
-				{
-					Slug: "spotify",
-					URL:  "https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM?si=sQXk5Y-GTUeB7OlCRKZ__Q",
-				},
-				{
-					Slug: "discord",
-					URL:  "https://discord.com/invite/lofigirl",
-				},
-				{
-					Slug: "reddit",
-					URL:  "https://www.reddit.com/r/LofiGirl",
-				},
-				{
-					Slug: "instagram",
-					URL:  "https://www.instagram.com/lofigirl",
-				},
-				{
-					Slug: "facebook",
-					URL:  "https://www.facebook.com/lofigirl",
-				},
-				{
-					Slug: "twitter",
-					URL:  "https://twitter.com/lofigirl",
-				},
-			},
-		},
-		{
 			Slug:  "chillhop",
 			Name:  "Chillhop Raccoon",
 			Owner: "Chillhop Music",
@@ -183,43 +107,6 @@ func getLiveRadios() []liveRadio {
 				{
 					Slug: "youtube",
 					URL:  "https://youtu.be/5yx6BWlEVcY",
-				},
-				{
-					Slug: "spotify",
-					URL:  "https://open.spotify.com/playlist/0CFuMybe6s77w6QQrJjW7d?si=3co_7Q6XT0OJZwkBlqWoDQ",
-				},
-				{
-					Slug: "discord",
-					URL:  "https://discord.com/invite/chillhop",
-				},
-				{
-					Slug: "reddit",
-					URL:  "https://www.reddit.com/r/chillhop",
-				},
-				{
-					Slug: "instagram",
-					URL:  "https://www.instagram.com/chillhopmusic",
-				},
-				{
-					Slug: "facebook",
-					URL:  "https://www.facebook.com/groups/1561371024098016",
-				},
-			},
-		},
-		{
-			Slug:  "chillhop-relax",
-			Name:  "Chillhop Relaxing Raccoon",
-			Owner: "Chillhop Music",
-			URL:   "https://youtu.be/7NOSDKb0HlU",
-			Cards: []string{},
-			Links: []socialLink{
-				{
-					Slug: "website",
-					URL:  "https://chillhop.com",
-				},
-				{
-					Slug: "youtube",
-					URL:  "https://youtu.be/7NOSDKb0HlU",
 				},
 				{
 					Slug: "spotify",
@@ -347,6 +234,7 @@ func getLiveRadios() []liveRadio {
 			Name:  "Coding Beats",
 			Owner: "Joma Tech",
 			URL:   "https://youtu.be/PY8f1Z3nARo",
+			gifURL: "https://youtu.be/11jY4FB2-oI",
 			Cards: []string{},
 			Links: []socialLink{
 				{
