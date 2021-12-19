@@ -5,7 +5,6 @@ Moralis.start({ serverUrl, appId });
 
 /* Authentication code */
 async function login() {
-    alert("in user created Javascript!");
     let user = Moralis.User.current();
     if (!user) {
         user = await Moralis.authenticate({ signingMessage: "Log in using Moralis" })
@@ -14,7 +13,7 @@ async function login() {
                 console.log(user.get("ethAddress"));
             })
             .catch(function (error) {
-                console(error);
+                console.log(error);
             });
     }
 }
