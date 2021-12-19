@@ -1,0 +1,14 @@
+.wallet-integration-button {
+    --border-radius: 9999px;
+    overflow: hidden;
+    position:absolute;
+    top:0;
+    right:0;
+    border-radius: var(--border-radius);
+    border: 1px solid transparent;
+    text-align: center;
+    transition: all .3s ease-in-out;
+    font-size: 14px;
+    box-sizing: border-box;
+    z-index:20;
+}

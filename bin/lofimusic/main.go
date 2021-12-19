@@ -66,19 +66,13 @@ func main() {
 			"app",
 			"pwa",
 		},
-		LoadingLabel: "Music for the metaverse... Enjoy!",
+		LoadingLabel: " Music for the Metaverse... Enjoy!",
 		Name:         "Lofimusic",
 		Image:        "https://lofimusic.app/web/covers/lofimusic.png",
 		RawHeaders: []string{
-			`<!-- Global site tag (gtag.js) - Google Analytics -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177947020-1"></script>
-			<script>
-			  window.dataLayer = window.dataLayer || [];
-			  function gtag(){dataLayer.push(arguments);}
-			  gtag('js', new Date());
-			
-			  gtag('config', 'UA-177947020-1');
-			</script>			
+			`<!-- Moralis Include -->
+			<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+            <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
 			`,
 			`<script>
 			var isOnYouTubeIframeAPIReady = false;
@@ -90,6 +84,7 @@ func main() {
 		Styles: []string{
 			"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap",
 			"/web/lofimusic.css",
+			"/web/w3elements.css",
 		},
 
 		ThemeColor: backgroundColor,
