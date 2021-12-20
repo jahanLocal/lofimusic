@@ -1,24 +1,21 @@
 .wallet-integration-button {
     --border-radius: 9999px;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+    border: 1px solid transparent;
     overflow: hidden;
     position:absolute;
-    top:0;
-    right:0;
-    border-radius: 12px;
+    top:3px;
+    right:10px;
     font-family: "Montserrat", sans-serif;
     letter-spacing: normal;
     word-spacing: normal;
     line-height: normal;
-    text-transform: none;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
     text-indent: 0px;
-    text-shadow: none;
     text-transform: uppercase;
-    border: 1px solid transparent;
     text-align: center;
     transition: all .3s ease-in-out;
     font-size: 14px;
-    color: white;
+    color: silver;
     box-sizing: border-box;
     z-index:20;
     cursor: pointer;
@@ -27,5 +24,6 @@
 }
 
 .wallet-integration-button:hover {
-    color: red;
+    color: #880399;
+    transform: scale(1.15);
 }
