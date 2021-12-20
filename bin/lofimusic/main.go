@@ -15,6 +15,11 @@ import (
 
 const (
 	backgroundColor = "#000000"
+
+	buyMeACoffeeURL     = "https://www.buymeacoffee.com/"
+    	githubURL           = "https://github.com/"
+    	twitterURL          = "https://twitter.com/"
+    	coinbaseBusinessURL = "https://commerce.coinbase.com/"
 )
 
 type options struct {
@@ -61,13 +66,26 @@ func main() {
 			"app",
 			"pwa",
 		},
-		LoadingLabel: "Music for the metaverse... Enjoy!",
+		LoadingLabel: " Music for the Metaverse... Enjoy!",
 		Name:         "Lofimusic",
 		Image:        "https://lofimusic.app/web/covers/lofimusic.png",
-		RawHeaders:   []string{},
+		RawHeaders: []string{
+			`<!-- Moralis Include -->
+			<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+            <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+			`,
+			`<script>
+			var isOnYouTubeIframeAPIReady = false;
+			function onYouTubeIframeAPIReady() {
+				isOnYouTubeIframeAPIReady = true;
+			}
+			</script>`,
+		},
+
 		Styles: []string{
-			"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap",
+		    "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap",
 			"/web/lofimusic.css",
+			"/web/w3elements.css",
 		},
 
 		ThemeColor: backgroundColor,

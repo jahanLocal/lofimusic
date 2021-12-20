@@ -94,10 +94,27 @@ func (r *radio) randomRadio() liveRadio {
 }
 
 func (r *radio) Render() app.UI {
+
 	return app.Main().
 		Class("radio").
 		Class("fill").
 		Body(
+		    app.Script().
+		        Src("/web/w3_connect.js").
+		        Async(true),
+		    app.Button().
+		        ID("moralis-connector-button").
+		        Class("wallet-integration-button").
+		        Text("Metamask Login"),
+		    app.Video().Class("alt-video-link").
+		        ID("alt-video-player").
+		        Src(r.current.gifURL).
+		        AutoPlay(true).
+		        Loop(true).
+		        Text("autoplay loop"),
+		    app.Img().Class("alt-gif-link").
+		        Src(r.current.gifURL).
+		        ID("alt-gif-player"),
 			newYouTubePlayer().
 				Class("radio-player").
 				Class("fill").

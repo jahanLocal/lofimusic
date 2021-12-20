@@ -101,6 +101,26 @@ func (n *nav) Render() app.UI {
 										),
 								),
 						),
+					app.Div().
+						Class("nav-support").
+						Class("hspace-out").
+						Body(
+							newLink().
+								Class("glow").
+								Icon(newSVGIcon().RawSVG(cryptoSVG)).
+								Label("Stake $Vibe Tokens").
+								Href(coinbaseBusinessURL),
+							newLink().
+								Class("glow").
+								Icon(newSVGIcon().RawSVG(discordSVG)).
+								Label("Discord").
+								Href(githubURL),
+							newLink().
+								Class("glow").
+								Icon(newSVGIcon().RawSVG(twitterSVG)).
+								Label("Twitter").
+								Href(twitterURL),
+						),
 				),
 		)
 }
